@@ -1,12 +1,18 @@
 describe("Airport", function() {
-  var player;
-  var song;
+  // beforeEach(function() {
+  //   player = new Player();
+  //   song = new Song();
+  // });
 
-  beforeEach(function() {
-    player = new Player();
-    song = new Song();
+  describe('it has a hangar for planes', function() {
+    it('should be an array', function() {
+      var airport = new Airport();
+      expect(airport.hangar).toEqual(jasmine.any(Array));
+    });
   });
 });
+
+
 
 /*
 
