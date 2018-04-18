@@ -1,13 +1,20 @@
 describe("Airport", function() {
-  // beforeEach(function() {
-  //   player = new Player();
-  //   song = new Song();
-  // });
+  beforeEach(function() {
+    someAirport = new Airport();
+  });
 
   describe('it has a hangar for planes', function() {
     it('should be an array', function() {
-      var airport = new Airport();
-      expect(airport.hangar).toEqual(jasmine.any(Array));
+      // var airport = new Airport();
+      expect(someAirport.hangar).toEqual(jasmine.any(Array));
+    });
+  });
+
+  describe('land', function(){
+    it('adds a plane to hangar', function() {
+      // var airport = new Airport();
+      someAirport.land('myspecialplane.com');
+      expect(someAirport.hangar).toContain('myspecialplane.com');
     });
   });
 });
