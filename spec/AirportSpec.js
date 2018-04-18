@@ -1,4 +1,6 @@
 describe("Airport", function() {
+  var someAirport;
+  
   beforeEach(function() {
     someAirport = new Airport();
   });
